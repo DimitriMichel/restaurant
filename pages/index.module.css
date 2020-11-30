@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+.container {
+  font-family: Lato, sans-serif;
+  display: flex;
+  width: 100%;
+}
