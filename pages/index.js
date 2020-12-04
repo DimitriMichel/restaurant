@@ -6,7 +6,6 @@ import Social from '../Components/Social';
 const Home = () => {
   return (
     <div className={styles.container}>
-      <Menu />
       <Hero />
     </div>
   );

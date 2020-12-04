@@ -1,13 +1,52 @@
+.welcomeMenu {
+  background-color: white;
+  padding: 50px;
 
-.welcome-menu{
-background-color: white;
 }
-.menu {
-
+.logocontainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom:50px;
 }
 .logo {
-
+  display: flex;
+  justify-content: center;
+  background: #EE4F91;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
 }
-.menu-title {
+.logo svg{
+  height: 300px;
+  width: 300px;
+}
 
+.menu {
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu ul li a{
+  color: black;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1.4rem;
+}
+
+
+
+
+.menuTitle {
+  color: #0971ce;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #7a8d99;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }

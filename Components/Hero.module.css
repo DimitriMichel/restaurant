@@ -1,4 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 .hero {
-  background-color: red;
+  background-image: url("../public/icebg2.jpeg");
   width: 100%;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  height: 100vh;
+}
+
+.hero h1{
+  color: white;
+  font-size: 7rem;
+  font-family: "Dancing Script", sans-serif;
+}
+.heroImageContainer {
+  position: absolute;
+  bottom: -1px;
 }

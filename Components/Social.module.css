@@ -1,9 +1,32 @@
-.social-icons {
+.socialIcons {
+  display: flex;
+}
+.socialIcons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: #7a8d99;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 .location {
+  align-self: flex-end;
+  position: absolute;
+  bottom: 50px;
 }
 .address {
+  margin-bottom: 20px;
+  color: #7a8d99;
+  font-size: 1.2rem;
 }
-.phone-number{
-
+.phoneNumber {
+}
+.phoneNumber a {
+  color: #0971ce;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
 }
