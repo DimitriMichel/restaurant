@@ -1,46 +1,62 @@
 .welcomeMenu {
   background-color: white;
-  padding: 50px;
-
-}
-.logocontainer{
-  width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom:50px;
+  position: relative;
+}
+.logoContainer {
+  position: absolute;
+  z-index: 100;
+  top: 10px;
 }
 .logo {
   display: flex;
   justify-content: center;
-  background: #EE4F91;
-  height: 150px;
-  width: 150px;
+  background: #ee4f91;
+  height: 90px;
+  width: 90px;
+  border: 6px solid white;
   border-radius: 50%;
 }
-.logo svg{
-  height: 300px;
-  width: 300px;
+.logo svg {
+  height: 90px;
+  width: 90px;
 }
 
 .menu {
+  margin: 15px;
 }
-.menu ul {
+.navigation {
   list-style: none;
-  padding: 0;
+  padding: 5px;
   margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.menu ul li a{
+.navigationItem a {
   color: black;
   font-weight: 700;
-  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
   text-decoration: none;
-  display: block;
-  margin-bottom: 1.4rem;
+  margin: 0 10px 1.4rem 10px;
 }
+.menuSectionA {
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 68px;
+}
+.menuSectionB {
+  width: 50vw;
+  display: flex;
+  padding-left: 108px;
+  flex-direction: row;
+  justify-content: flex-start;
 
-
-
-
+}
 .menuTitle {
   color: #0971ce;
   font-weight: 700;

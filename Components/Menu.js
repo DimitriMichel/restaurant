@@ -4,80 +4,64 @@ import Social from './Social';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-//Animation Config
-const yFloatingAnimation = {
-  static: { y: 0 },
-  floating: {
-    y: [5, -5],
-    transition: {
-      duration: 1.8,
-      ease: 'easeInOut',
-      yoyo: Infinity,
-    },
-  },
-};
-
 const Menu = () => {
   return (
     <div className={styles.welcomeMenu}>
-      <div className={styles.logocontainer}>
-        <div className={styles.logo}>
-          <motion.div
-            variants={yFloatingAnimation}
-            initial="static"
-            animate="floating"
-            transition="transition"
-          >
-            <Image src="/icelogo.svg" alt="logo" width={200} height={200} />
-          </motion.div>
+      <div className={styles.menu}>
+        <div className={styles.navigation} role="navigation">
+          <div className={styles.menuSectionA}>
+            <div className={styles.navigationItem}>
+              <motion.a
+                whileHover={{
+                  color: '#EE4F91',
+                }}
+                href="#"
+              >
+                <span aria-label="restaurant menu">Menu</span>
+              </motion.a>
+            </div>
+            <div className={styles.navigationItem}>
+              <motion.a
+                whileHover={{
+                  color: '#EE4F91',
+                }}
+                href="#"
+              >
+                Waitlist
+              </motion.a>
+            </div>
+          </div>
+          <div className={styles.logoContainer}>
+            <div className={styles.logo}>
+              <div>
+                <Image src="/icelogo.svg" alt="logo" width={350} height={350} />
+              </div>
+            </div>
+          </div>
+          <div className={styles.menuSectionB}>
+            <div className={styles.navigationItem}>
+              <motion.a
+                whileHover={{
+                  color: '#EE4F91',
+                }}
+                href="#"
+              >
+                Gift Cards
+              </motion.a>
+            </div>
+            <div className={styles.navigationItem}>
+              <motion.a
+                whileHover={{
+                  color: '#EE4F91',
+                }}
+                href="#"
+              >
+                Offers
+              </motion.a>
+            </div>
+          </div>
         </div>
       </div>
-      <div className={styles.menu}>
-        <div className={styles.menuTitle}>Menu</div>
-        <ul role="navigation">
-          <li>
-            <motion.a
-              whileHover={{
-                color: 'red',
-              }}
-              href="#"
-            >
-              <span aria-label="restaurant menu">Menu</span>
-            </motion.a>
-          </li>
-          <li>
-            <motion.a
-              whileHover={{
-                color: 'red',
-              }}
-              href="#"
-            >
-              Waitlist
-            </motion.a>
-          </li>
-          <li>
-            <motion.a
-              whileHover={{
-                color: 'red',
-              }}
-              href="#"
-            >
-              Gift Cards
-            </motion.a>
-          </li>
-          <li>
-            <motion.a
-              whileHover={{
-                color: 'red',
-              }}
-              href="#"
-            >
-              Offers
-            </motion.a>
-          </li>
-        </ul>
-      </div>
-      <Social />
     </div>
   );
 };
