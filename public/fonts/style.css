@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Goudy Handtooled';
+    src: url('other') format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Goudy Old Style';
+    src: url('GoudyOldStyle.ttf') format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
