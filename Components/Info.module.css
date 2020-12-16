@@ -4,8 +4,8 @@
 
 .information {
   display: flex;
+
   border-top: 15px solid white;
-  border-bottom: 15px solid white;
   border-image: repeating-linear-gradient(
       45deg,
       #ee4f91,
@@ -15,7 +15,7 @@
     )
     10;
   flex-direction: row;
-  height: 60vh;
+  height: 50vh;
   background-color: #ee4f91;
 }
 

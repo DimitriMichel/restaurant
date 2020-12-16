@@ -16,7 +16,8 @@
   width: 100%;
   text-align: center;
   overflow: hidden;
-  max-height: 95vh;
+  max-height: 100vh;
+  margin-top: 60px;
 }
 .hero h1 {
   margin: 40px 0 0 0;
