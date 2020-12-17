@@ -9,28 +9,25 @@
 .logoContainer {
   position: absolute;
   z-index: 100;
-  top: 10px;
+
 }
 .logo {
   display: flex;
   justify-content: center;
   background: #ee4f91;
-  height: 90px;
-  width: 90px;
-  border: 6px solid white;
+  height: 60px;
+  width: 60px;
+  border: 8px solid white;
   border-radius: 50%;
 }
-.logo svg {
-  height: 90px;
-  width: 90px;
-}
+
 
 .menu {
-  margin: 15px;
+  padding: 10px 0px;
+  max-width: 100%;
 }
 .navigation {
   list-style: none;
-  padding: 5px;
   margin: 0;
   display: flex;
   flex-direction: row;

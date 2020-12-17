@@ -4,12 +4,31 @@ import Social from './Social';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
+const animateAppearUp = {
+  initial: {
+    opacity: 0,
+    y: 10,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+  transition: {
+    delay: 10,
+  },
+};
 const Menu = () => {
   return (
     <div className={styles.welcomeMenu}>
       <div className={styles.menu}>
         <div className={styles.navigation} role="navigation">
-          <div className={styles.menuSectionA}>
+          <motion.div
+            variants={animateAppearUp}
+            animate="animate"
+            initial="initial"
+            transition={{ delay: 0.5 }}
+            className={styles.menuSectionA}
+          >
             <div className={styles.navigationItem}>
               <motion.a
                 whileHover={{
@@ -30,15 +49,26 @@ const Menu = () => {
                 Waitlist
               </motion.a>
             </div>
-          </div>
-          <div className={styles.logoContainer}>
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            whileHover={{ rotate: 360 }}
+            className={styles.logoContainer}
+          >
             <div className={styles.logo}>
               <div>
-                <Image src="/icelogo.svg" alt="logo" width={350} height={350} />
+                <Image src="/icelogo.svg" alt="logo" width={300} height={300} />
               </div>
             </div>
-          </div>
-          <div className={styles.menuSectionB}>
+          </motion.div>
+          <motion.div
+            variants={animateAppearUp}
+            animate="animate"
+            initial="initial"
+            transition={{ delay: 0.5 }}
+            className={styles.menuSectionB}
+          >
             <div className={styles.navigationItem}>
               <motion.a
                 whileHover={{
@@ -59,7 +89,7 @@ const Menu = () => {
                 Offers
               </motion.a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

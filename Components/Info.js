@@ -8,8 +8,8 @@ const Info = () => {
         <Image
           src="/shockedboy.png"
           alt="surprised boy"
-          width={340}
-          height={390}
+          width={320}
+          height={350}
         />
       </div>
       <div className={styles.infoTextContainer}>

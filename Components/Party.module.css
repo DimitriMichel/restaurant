@@ -4,33 +4,39 @@
 
 .information {
     display: flex;
-    flex-direction: row;
-    height: 50vh;
-    background-color: #ee4f91;
-    background-image: url('../public/partybg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
 
+    border-top: 15px solid white;
+    border-image: repeating-linear-gradient(
+            45deg,
+            #FFF07C,
+            #FFF07C 1%,
+            white 1%,
+            white 8%
+    )
+    10;
+    flex-direction: row-reverse;
+    height: 60vh;
+    background-color: #FFF07C;
 }
 
 .iceCreamImage {
     flex: 1;
     max-width: 50%;
-
+    background-image: url('../public/vanilla.jpeg');
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     background-attachment: fixed;
-    width: 100%;
 }
 .infoTextContainer {
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 2rem;
-
+    max-width: 50%;
 }
 .infoText {
     margin: 10px;
