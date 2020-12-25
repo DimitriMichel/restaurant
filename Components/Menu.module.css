@@ -5,11 +5,11 @@
   position: fixed;
   z-index: 100;
   top: 0;
+  left: 0;
 }
 .logoContainer {
   position: absolute;
   z-index: 100;
-
 }
 .logo {
   display: flex;
@@ -20,8 +20,6 @@
   border: 8px solid white;
   border-radius: 50%;
 }
-
-
 .menu {
   padding: 10px 0px;
   max-width: 100%;
@@ -55,7 +53,6 @@
   padding-left: 108px;
   flex-direction: row;
   justify-content: flex-start;
-
 }
 .menuTitle {
   color: #0971ce;

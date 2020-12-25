@@ -3,69 +3,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@500&display=swap');
 
 .information {
-    display: flex;
-
-    border-top: 15px solid white;
-    border-image: repeating-linear-gradient(
-            45deg,
-            #FFF07C,
-            #FFF07C 1%,
-            white 1%,
-            white 8%
+  display: flex;
+  border-top: 1vw solid white;
+  border-image: repeating-linear-gradient(
+      45deg,
+      #fff07c,
+      #fff07c 1%,
+      white 1%,
+      white 8%
     )
     10;
-    flex-direction: row-reverse;
-    height: 60vh;
-    background-color: #FFF07C;
+  flex-direction: row-reverse;
+  height: 60vh;
+  max-height: 1000px;
+  background-color: #fff07c;
 }
-
 .iceCreamImage {
-    flex: 1;
-    max-width: 50%;
-    background-image: url('../public/vanilla.jpeg');
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-attachment: fixed;
+  flex: 1;
+  max-width: 50%;
+  background-image: url('../public/vanilla.jpeg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
 }
 .infoTextContainer {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 2rem;
-    max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.8vw;
+  max-width: 50%;
 }
 .infoText {
-    margin: 10px;
-    max-width: 80%;
-    flex: 1;
-    font-family: 'Metropolis Medium', sans-serif;
-    position: relative;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  margin: 10px;
+  max-width: 80%;
+  flex: 1;
+  font-family: 'Metropolis Medium', sans-serif;
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.infoText button {
+  font-family: 'Milton', sans-serif;
+  color: black;
+  border: none;
+  margin: 0 25px;
+  padding: 5px 15px 0px 15px;
+  max-width: 50vw;
+  width: 8vw;
+  background-color: white;
+  font-size: 1.8vw;
+  text-align: center;
 }
 .magazine {
-    font-family: Domine, sans-serif;
-    color: white;
-    text-transform: uppercase;
-    margin-top: 15px;
-    font-size: 2.5rem;
+  font-family: Domine, sans-serif;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 15px;
+  font-size: 2.5rem;
 }
-.thanks{
-    font-family: 'Metropolis Medium', sans-serif;
-    color: white;
-    text-transform: uppercase;
+.thanks {
+  font-family: 'Metropolis Medium', sans-serif;
+  color: white;
+  text-transform: uppercase;
 
-    font-size: 2rem;
+  font-size: 2rem;
 }
-.highlight{
-    background-color: white;
-    color: #ee4f91;
-    margin-top: 15px;
+.highlight {
+  background-color: white;
+  color: #fff07c;
+  margin-top: 15px;
 }

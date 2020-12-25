@@ -1,18 +1,18 @@
 import React from 'react';
-import styles from './Party.module.css';
+import styles from './Discover.module.css';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-const Party = () => {
+const Discover = () => {
   return (
     <div className={styles.information}>
       <div className={styles.iceCreamImage}>
         <Image
-          src="/partyhat.png"
-          alt="woman in party hat"
-          width={390}
-          height={430}
-          loading='lazy'
+          src="/glassesboy.png"
+          alt="boy wearing party glasses"
+          width={360}
+          height={400}
+          loading="lazy"
         />
       </div>
       <div className={styles.infoTextContainer}>
@@ -22,13 +22,13 @@ const Party = () => {
           </div>
 
           <p>
-            In order to secure more funding we've been advised to show at
-            minimum 25% growth YoY!
+            If it's sweet, if it's new, well, we'll let you know!
             <br />
             <br />
-            So we do parties now!
+            Sign up for our Newsletter to get all the delicious updates, new
+            flavors, events, and what amazing things our team is up to!
             <br />
-            Isn't that great?
+
           </p>
           <br />
           <div className={styles.buttonsContainer}>
@@ -37,14 +37,7 @@ const Party = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 1 }}
             >
-              Learn More
-            </motion.button>
-            <motion.button
-              role="button"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 1 }}
-            >
-              Book Us
+              Sign Up
             </motion.button>
           </div>
 
@@ -56,4 +49,4 @@ const Party = () => {
   );
 };
 
-export default Party;
+export default Discover;
