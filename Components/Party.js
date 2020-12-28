@@ -10,8 +10,8 @@ const Party = () => {
         <Image
           src="/partyhat.png"
           alt="woman in party hat"
-          width={390}
-          height={430}
+          width={410}
+          height={460}
           loading='lazy'
         />
       </div>

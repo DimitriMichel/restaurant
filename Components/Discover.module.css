@@ -21,7 +21,7 @@
 .iceCreamImage {
     flex: 1;
     max-width: 50%;
-    background-image: url('../public/chocochipbg.jpeg');
+    background-image: url('../public/chocochipbg.jpg');
     background-size: cover;
     display: flex;
     justify-content: center;
