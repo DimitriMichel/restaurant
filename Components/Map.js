@@ -9,22 +9,22 @@ const ICON = icon({
   iconUrl: '/marker.png',
   iconSize: [32, 32],
 });
-const position = [51.505, -0.09];
+const position = [42.349908, -71.079819];
 
 const Map = () => {
   return (
     <div className={styles.information}>
       <div className={styles.iceCreamImage}>
         <MapContainer
-          center={[51.505, -0.09]}
-          zoom={13}
+          center={position}
+          zoom={15}
           scrollWheelZoom={false}
           style={{ height: '100%', width: '100%' }}
         >
           <TileLayer
             url={`https://api.mapbox.com/styles/v1/dimitrimichel/ckjcaeai46nmg19s8gcongozh/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.NEXT_PUBLIC_MAPBOX_API_KEY}`}
           />
-          <Marker icon={ICON} position={[51.505, -0.09]}>
+          <Marker icon={ICON} position={position}>
             <Popup>
               A pretty CSS3 popup. <br /> Easily customizable.
             </Popup>
@@ -34,13 +34,10 @@ const Map = () => {
       <div className={styles.infoTextContainer}>
         <div className={styles.infoText}>
           <div className={styles.thanks}>
-            <br />-
+            <h2>Visit Us!</h2>
+            <div className={styles.magazine}>-</div>
           </div>
-
           <p>
-            Give Us A Visit!
-            <br />
-            <br />
             Come down to our Back Bay, Boston location we'd love to have you,
             and you can try some of our amazing flavors.
           </p>

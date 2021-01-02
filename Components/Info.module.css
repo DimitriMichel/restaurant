@@ -17,13 +17,14 @@
   flex-direction: row;
   height: 60vh;
   max-height: 1000px;
-  background-color: #ee4f91;
+  background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjUxIiBoZWlnaHQ9IjUxIiB2aWV3Qm94PSIwIDAgNDAsNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg1MikgIj48cmVjdCBpZD0icGF0dGVybi1iYWNrZ3JvdW5kIiB3aWR0aD0iNDAwJSIgaGVpZ2h0PSI0MDAlIiBmaWxsPSJyZ2JhKDIzOCwgNzksIDE0NSwxKSI+PC9yZWN0PiA8cGF0aCBmaWxsPSJyZ2JhKDI0NiwgMTM1LCAxNzksMSkiIGQ9Ik0tMC41IDIwIGgxIHYxIGgtMSB6TTM5LjUgMjAgaDEgdjEgaC0xIHoiPjwvcGF0aD48cGF0aCBmaWxsPSJyZ2JhKDI0NywgMjUwLCAyNTIsMSkiIGQ9Ik0xOS43NSAyMCBoMC41IHYxIGgtMC41IHpNNTkuNzUgMjAgaDAuNSB2MSBoLTAuNSB6Ij48L3BhdGg+PC9wYXR0ZXJuPiAgPC9kZWZzPiA8cmVjdCBmaWxsPSJ1cmwoI3BhdHRlcm4pIiBoZWlnaHQ9IjEwMCUiIHdpZHRoPSIxMDAlIj48L3JlY3Q+PC9zdmc+");
+  background-attachment: fixed;
 }
 
 .iceCreamImage {
   flex: 1;
   max-width: 50%;
-  background-image: url('../public/icebg.jpg');
+  background-image: url('../public/pinkice.jpg');
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -67,4 +68,7 @@
   background-color: white;
   color: #ee4f91;
   margin-top: 15px;
+}
+.whiteColor {
+  color: white;
 }
