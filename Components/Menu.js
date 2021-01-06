@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Menu.module.css';
-import Social from './Social';
+import { AiFillTwitterCircle, AiFillFacebook, AiFillInstagram } from "react-icons/ai";
+import { RiFacebookCircleFill } from "react-icons/ri";
+
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -29,25 +31,28 @@ const Menu = () => {
             transition={{ delay: 0.5 }}
             className={styles.menuSectionA}
           >
-            <div className={styles.navigationItem}>
-              <motion.a
-                whileHover={{
-                  color: '#EE4F91',
-                }}
-                href="#"
-              >
-                <span aria-label="restaurant menu">Menu</span>
-              </motion.a>
-            </div>
-            <div className={styles.navigationItem}>
-              <motion.a
-                whileHover={{
-                  color: '#EE4F91',
-                }}
-                href="#"
-              >
-                Waitlist
-              </motion.a>
+            <span className={styles.storeName}>Scoops!</span>
+            <div className={styles.navigationLinksA}>
+              <div className={styles.navigationItem}>
+                <motion.a
+                  whileHover={{
+                    color: '#EE4F91',
+                  }}
+                  href="#"
+                >
+                  <span aria-label="restaurant menu">Menu</span>
+                </motion.a>
+              </div>
+              <div className={styles.navigationItem}>
+                <motion.a
+                  whileHover={{
+                    color: '#EE4F91',
+                  }}
+                  href="#"
+                >
+                  Waitlist
+                </motion.a>
+              </div>
             </div>
           </motion.div>
           <motion.div
@@ -88,6 +93,9 @@ const Menu = () => {
               >
                 Offers
               </motion.a>
+              <RiFacebookCircleFill size={30}/>
+              <AiFillInstagram size={30} />
+              <AiFillTwitterCircle size={30} />
             </div>
           </motion.div>
         </div>
