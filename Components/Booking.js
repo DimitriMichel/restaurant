@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Party.module.css';
-import { motion } from 'framer-motion';
-
-const Booking = () => {
+import { AnimatePresence, motion } from 'framer-motion';
+import DatePicker from 'react-datepicker/';
+import setHours from 'date-fns/setSeconds';
+import setMinutes from 'date-fns/setMinutes';
+import Link from 'next/link';
+const BookingView = () => {
+  const [startDate, setStartDate] = useState(
+    setHours(setMinutes(new Date(), 60), 17)
+  );
   return (
     <motion.div
       className={styles.infoTextContainer}
@@ -15,37 +21,24 @@ const Booking = () => {
         <div className={styles.thanks}>
           <br />-
         </div>
-
-        <p>
-          In order to secure more funding we've been advised to show at
-          minimum 25% growth YoY!
-          <br />
-          <br />
-          So we do parties now!
-          <br />
-          Isn't that great?
-        </p>
+        <h4>Pick A Date!</h4>
         <br />
-        <div className={styles.buttonsContainer}>
-          <motion.button
-            role="button"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 1 }}
-          >
-            Learn More
-          </motion.button>
-          <motion.button
-            role="button"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 1 }}
-          >
-            Book Us
-          </motion.button>
-        </div>
-
+        DATE
         <div className={styles.magazine}>-</div>
         <br />
       </div>
+    </motion.div>
+  );
+};
+
+const Booking = () => {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      Hi
     </motion.div>
   );
 };

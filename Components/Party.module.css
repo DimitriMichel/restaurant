@@ -16,7 +16,7 @@
   flex-direction: row-reverse;
   height: 60vh;
   max-height: 1000px;
-  background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjM3IiBoZWlnaHQ9IjM3IiB2aWV3Qm94PSIwIDAgNDAsNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg1MikgIj48cmVjdCBpZD0icGF0dGVybi1iYWNrZ3JvdW5kIiB3aWR0aD0iNDAwJSIgaGVpZ2h0PSI0MDAlIiBmaWxsPSJyZ2JhKDI1NSwgMjQwLCAxMjQsMSkiPjwvcmVjdD4gPHBhdGggZmlsbD0icmdiYSgyNiwgMzIsIDQ0LDEpIiBkPSJNMCAyMCBoMSB2MSBoLTEgek00MCAyMCBoMSB2MSBoLTEgek00MCAyMCBoMSB2MSBoLTEgeiI+PC9wYXRoPjxwYXRoIGZpbGw9InJnYmEoMjQ3LCAyNTAsIDI1MiwxKSIgZD0iTTIwIDIwIGgxIHYxIGgtMSB6TTYwIDIwIGgxIHYxIGgtMSB6Ij48L3BhdGg+PC9wYXR0ZXJuPiAgPC9kZWZzPiA8cmVjdCBmaWxsPSJ1cmwoI3BhdHRlcm4pIiBoZWlnaHQ9IjEwMCUiIHdpZHRoPSIxMDAlIj48L3JlY3Q+PC9zdmc+");
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjM3IiBoZWlnaHQ9IjM3IiB2aWV3Qm94PSIwIDAgNDAsNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg1MikgIj48cmVjdCBpZD0icGF0dGVybi1iYWNrZ3JvdW5kIiB3aWR0aD0iNDAwJSIgaGVpZ2h0PSI0MDAlIiBmaWxsPSJyZ2JhKDI1NSwgMjQwLCAxMjQsMSkiPjwvcmVjdD4gPHBhdGggZmlsbD0icmdiYSgyNiwgMzIsIDQ0LDEpIiBkPSJNMCAyMCBoMSB2MSBoLTEgek00MCAyMCBoMSB2MSBoLTEgek00MCAyMCBoMSB2MSBoLTEgeiI+PC9wYXRoPjxwYXRoIGZpbGw9InJnYmEoMjQ3LCAyNTAsIDI1MiwxKSIgZD0iTTIwIDIwIGgxIHYxIGgtMSB6TTYwIDIwIGgxIHYxIGgtMSB6Ij48L3BhdGg+PC9wYXR0ZXJuPiAgPC9kZWZzPiA8cmVjdCBmaWxsPSJ1cmwoI3BhdHRlcm4pIiBoZWlnaHQ9IjEwMCUiIHdpZHRoPSIxMDAlIj48L3JlY3Q+PC9zdmc+');
   background-attachment: fixed;
 }
 .iceCreamImage {
@@ -35,7 +35,6 @@
   align-items: center;
   flex-direction: column;
   font-size: 1.8vw;
-  max-width: 50%;
 }
 .infoText {
   margin: 10px;
@@ -49,8 +48,13 @@
   align-items: center;
   flex-direction: column;
 }
-.infoText button {
-  font-family: 'Milton', sans-serif;
+.center {
+  display: block;
+  text-align: center;
+  max-width: 50%;
+  width: 100%;
+}
+.buttonsContainer button{
   color: black;
   border: none;
   margin: 0 25px;
@@ -65,7 +69,6 @@
   font-family: Domine, sans-serif;
   color: white;
   text-transform: uppercase;
-  margin-top: 15px;
   font-size: 2.5rem;
 }
 .thanks {
@@ -79,4 +82,22 @@
   background-color: white;
   color: #fff07c;
   margin-top: 15px;
+}
+.calendar {
+  width: 100%;
+}
+.dateConfirm{
+  margin: 10px 0 0 0;
+  background-color: white;
+  border-radius: 4px;
+  padding: 5px;
+  min-width: 20vw;
+  cursor: default;
+}
+.dateNotSelected{
+  color: #7a8d99;
+  min-width: 20vw;
+}
+.buttonsContainer button{
+  font-family: 'Milton', sans-serif;
 }
