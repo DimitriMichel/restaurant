@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@500&display=swap');
 
-.information {
+.panelsContainer {
   display: flex;
   border-top: 1vw solid white;
   border-image: repeating-linear-gradient(
@@ -19,14 +19,14 @@
   background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjM3IiBoZWlnaHQ9IjM3IiB2aWV3Qm94PSIwIDAgNDAsNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg1MikgIj48cmVjdCBpZD0icGF0dGVybi1iYWNrZ3JvdW5kIiB3aWR0aD0iNDAwJSIgaGVpZ2h0PSI0MDAlIiBmaWxsPSJyZ2JhKDEwMiwgMSwgMjU1LDEpIj48L3JlY3Q+IDxwYXRoIGZpbGw9InJnYmEoNjYsIDE1MywgMjI1LDEpIiBkPSJNMCAyMCBoMSB2MSBoLTEgek00MCAyMCBoMSB2MSBoLTEgek00MCAyMCBoMSB2MSBoLTEgeiI+PC9wYXRoPjxwYXRoIGZpbGw9InJnYmEoMjQ3LCAyNTAsIDI1MiwxKSIgZD0iTTIwIDIwIGgxIHYxIGgtMSB6TTYwIDIwIGgxIHYxIGgtMSB6Ij48L3BhdGg+PC9wYXR0ZXJuPiAgPC9kZWZzPiA8cmVjdCBmaWxsPSJ1cmwoI3BhdHRlcm4pIiBoZWlnaHQ9IjEwMCUiIHdpZHRoPSIxMDAlIj48L3JlY3Q+PC9zdmc+');
   background-attachment: fixed;
 }
-.iceCreamImage {
+.imagePanel {
   flex: 1;
   max-width: 50%;
   height: 100%;
   z-index: 1000;
 }
 
-.infoTextContainer {
+.panelTextContainer {
   display: flex;
   color: white;
   justify-content: center;
@@ -35,7 +35,7 @@
   font-size: 1.8vw;
   max-width: 50%;
 }
-.infoText {
+.panelText {
   margin: 10px;
   max-width: 80%;
   flex: 1;
@@ -47,7 +47,7 @@
   align-items: center;
   flex-direction: column;
 }
-.infoText button {
+.panelText button {
   font-family: 'Milton', sans-serif;
   color: black;
   border: none;
@@ -71,6 +71,12 @@
   text-transform: uppercase;
   font-size: 2rem;
 }
+.thanks h2{
+  font-family: Milton, sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-size: 5rem;
+}
 .highlight {
   background-color: white;
   color: #fff07c;
@@ -80,3 +86,63 @@
   width: 100%;
   height: 100%;
 }
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .panelsContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    border-top: 2vw solid white;
+    width: 100%;
+    height: 150vh;
+  }
+  .imagePanel {
+    max-width: 100%;
+  }
+  .panelTextContainer {
+    max-width: 100%;
+    width: 100%;
+    height: 60vh;
+  }
+  .center {
+    max-width: 100%;
+  }
+  .panelText {
+    margin: 0;
+    max-width: 95%;
+  }
+  .panelText p{
+    font-size: 1.5rem;
+  }
+  .infoPanel {
+    font-size: 1.5rem;
+  }
+  .dash {
+    font-size: 2rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 800px and down) */
+@media only screen and (min-width: 760px) {
+  .panelText p {
+    font-size: 2rem;
+  }
+  .dash{
+    font-size: 3rem;
+    margin-top: 0;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+

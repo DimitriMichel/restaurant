@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Playfair+Display:wght@500&family=Source+Sans+Pro:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Domine:wght@500&display=swap');
 
-.information {
+.panelsContainer {
   display: flex;
   border-top: 1vw solid white;
   border-image: repeating-linear-gradient(
@@ -21,7 +18,7 @@
   background-position: center;
   background-attachment: fixed;
 }
-.infoTextContainer {
+.panelTextContainer {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -31,7 +28,7 @@
   flex-direction: column;
   font-size: 1.8vw;
 }
-.infoText {
+.panelText {
   margin: 10px;
   max-width: 80%;
   flex: 1;
@@ -43,42 +40,53 @@
   align-items: center;
   flex-direction: column;
 }
-.infoText h1 {
+.panelText h1 {
   margin: 40px 0 0 0;
   color: white;
   font-size: 11rem;
   font-family: 'Milton', sans-serif;
   position: relative;
+  letter-spacing: 1.5px;
+}
+.subHeadline{
+  font-family: 'Milton', sans-serif;
   letter-spacing: 2px;
 }
-.infoText button {
-  font-family: 'Milton', sans-serif;
-  color: black;
-  border: none;
-  margin: 0 25px;
-  padding: 5px 15px 0px 15px;
-  max-width: 50vw;
-  width: 8vw;
-  background-color: white;
-  font-size: 1.8vw;
-  text-align: center;
-}
-.magazine {
-  font-family: Domine, sans-serif;
-  color: white;
-  text-transform: uppercase;
-  margin-top: 15px;
-  font-size: 2.5rem;
-}
-.thanks {
-  font-family: 'Metropolis Medium', sans-serif;
-  color: white;
-  text-transform: uppercase;
 
-  font-size: 2rem;
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .panelsContainer {
+    border-top: 2vw solid white;
+  }
+  .panelText{
+    margin: 0;
+    max-width: 100%;
+  }
+  .panelText h1 {
+    margin: 0;
+    font-size: 7rem;
+    line-height: 95px;
+    text-align: center;
+  }
+  .subHeadline{
+    font-size: 1.2rem;
+  }
+
 }
-.highlight {
-  background-color: white;
-  color: #fff07c;
-  margin-top: 15px;
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

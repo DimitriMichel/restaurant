@@ -4,12 +4,14 @@ import { motion } from 'framer-motion';
 import { useInView, InView } from 'react-intersection-observer';
 import SplitTextWrapper from '../utils/SplitTextWrapper';
 //Animation Config
-const appearUpAnimation = {
-  initial: { opacity: 0, y: 60 },
-  animate: { opacity: 1, y: 1, transition: { delay: 0.5 } },
+const splitTextAnimation = {
+  visible: (i) => ({
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+    },
+  }),
 };
-
-
 const Banner = () => {
   //Intersectional Observer Configurations
   const [ref, inView] = useInView({
@@ -17,30 +19,26 @@ const Banner = () => {
     triggerOnce: true,
   });
   return (
-    <div ref={ref} className={styles.information}>
+    <div ref={ref} className={styles.panelsContainer}>
       {inView ? (
         <motion.div
-          className={styles.infoTextContainer}
+          className={styles.panelTextContainer}
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <motion.div className={styles.infoText}>
-            <motion.h1
-            ><SplitTextWrapper
-              initial={{ y: '100%' }}
-              animate="visible"
-              variants={{
-                visible: i => ({
-                  y: 0,
-                  transition: {
-                    delay: i * 0.1
-                  }
-                })
-              }}
-            >
-              "GREEN with ENVY"</SplitTextWrapper>
+          <motion.div className={styles.panelText}>
+            <motion.h1>
+              <SplitTextWrapper
+                initial={{ y: '100%' }}
+                animate="visible"
+                variants={splitTextAnimation}
+              >
+                GREEN with ENVY
+              </SplitTextWrapper>
+
             </motion.h1>
+            <motion.div className={styles.subHeadline}>coming soon, March 2021</motion.div>
           </motion.div>
         </motion.div>
       ) : (

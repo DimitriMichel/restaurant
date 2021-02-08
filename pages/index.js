@@ -5,7 +5,7 @@ import styles from './index.module.css';
 import Hero from '../Components/Hero';
 import Info from '../Components/Info';
 import Party from '../Components/Party';
-import Discover from '../Components/Discover';
+import News from '../Components/News';
 import Banner from '../Components/Banner';
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -26,7 +26,9 @@ const Home = () => {
       <Hero />
       <Info/>
       <Party/>
+      <News/>
       <Banner/>
+
       <Map/>
     </div>
     </AnimatePresence>

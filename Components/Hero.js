@@ -29,7 +29,7 @@ const Hero = () => {
   return (
     <section id="hero">
       <div className={styles.heroContainer}>
-        <Menu />/;
+        <Menu />
         <div className={styles.hero}>
           <motion.h1
             variants={appearUpAnimation}

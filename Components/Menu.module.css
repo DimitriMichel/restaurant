@@ -1,6 +1,7 @@
 .welcomeMenu {
   background-color: white;
   display: flex;
+  height: 4vw;
   justify-content: center;
   position: fixed;
   z-index: 100;
@@ -12,21 +13,23 @@
   color: #ee4f91;
   text-transform: uppercase;
   width: 100%;
-justify-content: flex-start;
+  cursor: default;
+  justify-content: flex-start;
   margin-left: 20px;
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 .logoContainer {
   position: absolute;
   z-index: 100;
 }
 .logo {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   background: #ee4f91;
-  height: 60px;
-  width: 60px;
-  border: 8px solid white;
+  height: 4vw;
+  width: 4vw;
+  border: 0.7vw solid white;
   border-radius: 50%;
 }
 .menu {
@@ -37,10 +40,11 @@ justify-content: flex-start;
   margin: 0;
   display: flex;
   flex-direction: row;
+  height: 100%;
   justify-content: space-around;
   max-width: 100vw;
 }
-.navigationItem{
+.navigationItem {
   display: flex;
   align-items: center;
   height: 100%;
@@ -49,13 +53,13 @@ justify-content: flex-start;
   color: black;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.7vw;
   text-decoration: underline #ee4f91;
   margin: 0 30px;
 }
 
-.navigationLinksA{
-  display: flex;
+.navigationLinksA {
+  display: inline-flex;
   align-items: center;
   height: 100%;
   flex-direction: row;
@@ -70,6 +74,7 @@ justify-content: flex-start;
 }
 .menuSectionB {
   width: 50vw;
+  height: 100%;
   display: flex;
   padding-left: 108px;
   flex-direction: row;
@@ -78,9 +83,94 @@ justify-content: flex-start;
 .menuTitle {
   color: #0971ce;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.2vw;
+  height: 100%;
   border-bottom: 1px solid #7a8d99;
   padding-bottom: 20px;
   margin-bottom: 20px;
   text-transform: uppercase;
+}
+.socialMediaIcons {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+.socialIcons {
+  margin-right: 10px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .welcomeMenu {
+    height: 13vw;
+  }
+  .storeName {
+    display: none;
+  }
+  .socialMediaIcons {
+    display: none;
+  }
+  .logoContainer {
+    top: 5px;
+  }
+  .logo {
+    height: 12vw;
+    width: 12vw;
+    border: 2vw solid white;
+  }
+  .navigationItem {
+  }
+  .navigationItem a {
+    font-size: 0.9rem;
+    margin: 0 10px 0px 10px;
+  }
+  .menuSectionA {
+    width: 50vw;
+    margin-right: 0;
+    justify-content: center;
+    padding-right: 10px;
+  }
+  .navigationLinksA {
+    justify-content: center;
+  }
+  .menuSectionB {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    padding-left: 10px;
+    justify-content: center;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 800px and down) */
+@media only screen and (min-width: 760px) {
+  .welcomeMenu {
+    height: 8vw;
+  }
+  .logo {
+    height: 7vw;
+    width: 7vw;
+    border: 1.5vw solid white;
+  }
+  .menuSectionB {
+    padding-left: 0px;
+  }
+  .navigationItem a {
+    font-size: 1.3rem;
+    margin: 0 10px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

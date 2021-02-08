@@ -1,44 +1,82 @@
 import React, { useState } from 'react';
 import styles from './Party.module.css';
 import { AnimatePresence, motion } from 'framer-motion';
-import DatePicker from 'react-datepicker/';
-import setHours from 'date-fns/setSeconds';
-import setMinutes from 'date-fns/setMinutes';
-import Link from 'next/link';
-const BookingView = () => {
-  const [startDate, setStartDate] = useState(
-    setHours(setMinutes(new Date(), 60), 17)
-  );
-  return (
-    <motion.div
-      className={styles.infoTextContainer}
-      variants={appearUpAnimation}
-      initial="initial"
-      animate="animate"
-      transition="transition"
-    >
-      <div className={styles.infoText}>
-        <div className={styles.thanks}>
-          <br />-
-        </div>
-        <h4>Pick A Date!</h4>
-        <br />
-        DATE
-        <div className={styles.magazine}>-</div>
-        <br />
-      </div>
-    </motion.div>
-  );
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+
+//Animation Config
+const appearUpAnimation = {
+  initial: { opacity: 0, y: 60 },
+  animate: { opacity: 1, y: 1, transition: { delay: 0.3 } },
 };
 
 const Booking = () => {
+  const [isDateSelected, setDateSelected] = useState(false);
+  const [selectedDate, setDate] = useState('');
+  const [isConfirmed, setConfirmed] = useState(false);
+  const [isEnabled, setEnabled] = useState(true);
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial="initial"
+      animate="animate"
+      variants={appearUpAnimation}
+      transition="transition"
+      className={styles.calendar}
     >
-      Hi
+      <Calendar
+        onClickDay={(value) => {
+          let clickedDate = value.toString().substring(0, 15);
+          if (isEnabled) {
+            setDate(clickedDate);
+          }
+          setDateSelected(true);
+        }}
+      />
+      <div className={styles.dateConfirmContainer}>
+        {isDateSelected ? (
+          <div className={styles.dateConfirm}>
+            <motion.div layout className={styles.dateSelected}>
+              {selectedDate}
+            </motion.div>
+            {isConfirmed ? (
+              <motion.div
+                layout
+                initial="initial"
+                animate="animate"
+                variants={appearUpAnimation}
+                transition="transition"
+              >
+                Confirmed{' '}
+                <span role="img" aria-label="green check mark emoji">
+                  ✅{' '}
+                </span>
+                <span role="img" aria-label="party hat emoji">
+                  🥳
+                </span>
+              </motion.div>
+            ) : (
+              <motion.button
+                layout
+                whileHover={{ scale: 1.1 }}
+                onTap={() => {
+                  setEnabled(false);
+                  setConfirmed(true);
+                }}
+              >
+                Confirm
+              </motion.button>
+            )}
+          </div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className={styles.dateNotSelected}
+          >
+            Please Select A Date
+          </motion.div>
+        )}
+      </div>
     </motion.div>
   );
 };

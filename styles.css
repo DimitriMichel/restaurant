@@ -6,16 +6,17 @@ body {
   width: 100vw;
   overflow-x: hidden;
   max-width: 3900px;
-  font-size: 16px;
 }
 h2 {
-  font-family: Lato, sans-serif;
-  font-size: 3vw;
   margin: 10px;
 }
+:root {
+  font-size: 100%;
+}
+
 .react-calendar {
   padding: 10px;
-  width: 30vw;
+  width: 40vw;
   border-color: gold !important;
   border-radius: 4px;
   text-underline: none;
@@ -26,7 +27,7 @@ h2 {
 }
 .react-calendar__navigation__label__labelText{
   color: white;
-  font-size: 1.3vw;
+  font-size: 1.6vw;
   font-family: Lato, sans-serif;
 }
 .react-calendar__month-view__weekdays__weekday {
@@ -50,4 +51,35 @@ abbr[title] {
 }
 .react-calendar__tile--hasActive {
   background: white;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .react-calendar__navigation__label__labelText{
+    font-size: 1.2rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .react-calendar {
+    width: 350px !important;
+  }
+  .react-calendar__navigation__label__labelText{
+    font-size: 1.4rem;
+
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

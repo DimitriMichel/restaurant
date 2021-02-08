@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@500&display=swap');
 
-.information {
+.panelsContainer {
   display: flex;
 
   border-top: 1vw solid white;
@@ -21,7 +21,7 @@
   background-attachment: fixed;
 }
 
-.iceCreamImage {
+.panelImage {
   flex: 1;
   max-width: 50%;
   background-image: url('../public/pinkice.jpg');
@@ -31,7 +31,7 @@
   align-items: center;
   background-attachment: fixed;
 }
-.infoTextContainer {
+.panelTextContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,7 @@
   font-size: 1.8vw;
   max-width: 50%;
 }
-.infoText {
+.panelText {
   margin: 10px;
   max-width: 80%;
   flex: 1;
@@ -59,10 +59,11 @@
   font-size: 1.8vw;
 }
 .thanks{
-  font-family: 'Metropolis Medium', sans-serif;
+  font-family: 'Milton', sans-serif;
   color: white;
   text-transform: uppercase;
   font-size: 1.8vw;
+
 }
 .highlight{
   background-color: white;
@@ -71,4 +72,67 @@
 }
 .whiteColor {
   color: white;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .panelsContainer {
+    display: flex;
+    flex-direction: column;
+    border-top: 2vw solid white;
+    width: 100%;
+    height: 150vh;
+  }
+  .panelImage{
+    max-width: 100%;
+  }
+  .panelTextContainer{
+    max-width: 100%;
+    height: 60vh;
+  }
+  .thanks{
+    font-size: 3.5rem;
+  }
+  .highlight{
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  .thanks{
+    max-height: 30%;
+  }
+  .magazine{
+    font-size: 2rem;
+
+  }
+  .magazine h3{
+
+    margin-top: 0px;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 800px and down) */
+@media only screen and (max-width: 800px) {
+.thanks{
+  font-size: 3rem;
+}
+  .highlight{
+    font-size: 2rem;
+  }
+  .magazine h3{
+    font-size: 3rem;
+    margin-top: 0;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

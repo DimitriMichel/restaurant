@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@500&display=swap');
 
-.information {
+.panelsContainer {
   display: flex;
   border-top: 1vw solid white;
   border-image: repeating-linear-gradient(
@@ -19,7 +19,7 @@
   background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjM3IiBoZWlnaHQ9IjM3IiB2aWV3Qm94PSIwIDAgNDAsNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg1MikgIj48cmVjdCBpZD0icGF0dGVybi1iYWNrZ3JvdW5kIiB3aWR0aD0iNDAwJSIgaGVpZ2h0PSI0MDAlIiBmaWxsPSJyZ2JhKDI1NSwgMjQwLCAxMjQsMSkiPjwvcmVjdD4gPHBhdGggZmlsbD0icmdiYSgyNiwgMzIsIDQ0LDEpIiBkPSJNMCAyMCBoMSB2MSBoLTEgek00MCAyMCBoMSB2MSBoLTEgek00MCAyMCBoMSB2MSBoLTEgeiI+PC9wYXRoPjxwYXRoIGZpbGw9InJnYmEoMjQ3LCAyNTAsIDI1MiwxKSIgZD0iTTIwIDIwIGgxIHYxIGgtMSB6TTYwIDIwIGgxIHYxIGgtMSB6Ij48L3BhdGg+PC9wYXR0ZXJuPiAgPC9kZWZzPiA8cmVjdCBmaWxsPSJ1cmwoI3BhdHRlcm4pIiBoZWlnaHQ9IjEwMCUiIHdpZHRoPSIxMDAlIj48L3JlY3Q+PC9zdmc+');
   background-attachment: fixed;
 }
-.iceCreamImage {
+.imagePanel {
   flex: 1;
   max-width: 50%;
   background-image: url('../public/vanilla.jpg');
@@ -29,14 +29,15 @@
   align-items: center;
   background-attachment: fixed;
 }
-.infoTextContainer {
+.panelTextContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-size: 1.8vw;
+  width: 100%;
 }
-.infoText {
+.panelText {
   margin: 10px;
   max-width: 80%;
   flex: 1;
@@ -49,12 +50,13 @@
   flex-direction: column;
 }
 .center {
-  display: block;
-  text-align: center;
   max-width: 50%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.buttonsContainer button{
+.buttonsContainer button {
   color: black;
   border: none;
   margin: 0 25px;
@@ -65,39 +67,148 @@
   font-size: 1.8vw;
   text-align: center;
 }
-.magazine {
-  font-family: Domine, sans-serif;
-  color: white;
-  text-transform: uppercase;
-  font-size: 2.5rem;
+.infoPanel {
+  margin: 10px;
 }
-.thanks {
+.dash {
   font-family: 'Metropolis Medium', sans-serif;
   color: white;
   text-transform: uppercase;
-
   font-size: 2rem;
-}
-.highlight {
-  background-color: white;
-  color: #fff07c;
-  margin-top: 15px;
 }
 .calendar {
   width: 100%;
 }
-.dateConfirm{
+.dateConfirmContainer {
   margin: 10px 0 0 0;
   background-color: white;
   border-radius: 4px;
   padding: 5px;
   min-width: 20vw;
   cursor: default;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
-.dateNotSelected{
+.dateConfirm {
+  background-color: white;
+  border-radius: 4px;
+  padding: 5px;
+  min-width: 20vw;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.dateConfirm button {
+  font-family: 'Milton', sans-serif;
+  color: black;
+  border: 1px #f7a7c8 solid;
+  border-radius: 4px;
+  padding: 5px 15px 0 15px;
+  max-width: 50vw;
+  width: 8vw;
+  background-color: white;
+  font-size: 1.8vw;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.dateSelected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ee4f91;
+  padding: 5px;
+  color: white;
+  margin-right: 10px;
+  border-radius: 4px;
+  min-height: 20px;
+}
+.dateNotSelected {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #7a8d99;
   min-width: 20vw;
+  min-height: 50px;
 }
-.buttonsContainer button{
+.buttonsContainer button {
   font-family: 'Milton', sans-serif;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .panelsContainer {
+    display: flex;
+    flex-direction: column;
+    border-top: 2vw solid white;
+    width: 100%;
+    height: 150vh;
+  }
+  .imagePanel {
+    max-width: 100%;
+  }
+  .panelTextContainer {
+    max-width: 100%;
+    width: 100%;
+    height: 60vh;
+  }
+  .center {
+    max-width: 100%;
+  }
+  .panelText {
+    margin: 0;
+    max-width: 95%;
+  }
+  .dateConfirm {
+    font-size: 1.3rem;
+  }
+  .dateConfirm button {
+    font-size: 1.3rem;
+    width: auto;
+  }
+  .dateSelected {
+    font-size: 1.3rem;
+  }
+  .infoPanel {
+    font-size: 1.5rem;
+  }
+  .buttonsContainer button {
+    font-size: 1.5rem;
+    width: 100px;
+    height: 30px;
+    padding: 0 10px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 800px and down) */
+@media only screen and (min-width: 760px) {
+  .infoPanel {
+    font-size: 2rem;
+  }
+  .buttonsContainer button {
+    font-size: 2rem;
+    width: 100px;
+    height: fit-content;
+    padding: 5px 10px 0 10px;
+    margin-top: 10px;
+  }
+  .buttonsContainer {
+  }
+  .dash{
+    font-size: 3rem;
+    margin-top: 0;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

@@ -13,11 +13,11 @@ const position = [42.349908, -71.079819];
 
 const Map = () => {
   return (
-    <div className={styles.information}>
-      <div className={styles.iceCreamImage}>
+    <div className={styles.panelsContainer}>
+      <div className={styles.imagePanel}>
         <MapContainer
           center={position}
-          zoom={15}
+          zoom={14}
           scrollWheelZoom={false}
           style={{ height: '100%', width: '100%' }}
         >
@@ -31,8 +31,8 @@ const Map = () => {
           </Marker>
         </MapContainer>
       </div>
-      <div className={styles.infoTextContainer}>
-        <div className={styles.infoText}>
+      <div className={styles.panelTextContainer}>
+        <div className={styles.panelText}>
           <div className={styles.thanks}>
             <h2>Visit Us!</h2>
             <div className={styles.magazine}>-</div>
