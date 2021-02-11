@@ -21,6 +21,7 @@ const Newsletter = () => {
   });
   return (
     <motion.div
+      id='newsletter'
       ref={ref}
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}

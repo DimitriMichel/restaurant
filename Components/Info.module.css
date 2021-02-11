@@ -123,10 +123,16 @@
     font-size: 3rem;
     margin-top: 0;
   }
+  .panelText{
+    max-width: 100%;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .thanks{
+
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

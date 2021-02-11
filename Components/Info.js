@@ -27,7 +27,7 @@ const Info = () => {
     triggerOnce: true,
   });
   return (
-    <div ref={ref} className={styles.panelsContainer}>
+    <div id="menu" ref={ref} className={styles.panelsContainer}>
       <div className={styles.panelImage}>
         <motion.div
           initial={{ opacity: 0 }}

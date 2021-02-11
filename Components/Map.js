@@ -13,7 +13,7 @@ const position = [42.349908, -71.079819];
 
 const Map = () => {
   return (
-    <div className={styles.panelsContainer}>
+    <div id="visit" className={styles.panelsContainer}>
       <div className={styles.imagePanel}>
         <MapContainer
           center={position}
@@ -25,9 +25,7 @@ const Map = () => {
             url={`https://api.mapbox.com/styles/v1/dimitrimichel/ckjcaeai46nmg19s8gcongozh/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.NEXT_PUBLIC_MAPBOX_API_KEY}`}
           />
           <Marker icon={ICON} position={position}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
+            <Popup>Scoops!.</Popup>
           </Marker>
         </MapContainer>
       </div>

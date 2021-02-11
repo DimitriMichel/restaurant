@@ -1,4 +1,6 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Link from 'next/link';
 import styles from './Menu.module.css';
 import {
   AiFillTwitterCircle,
@@ -6,7 +8,6 @@ import {
   AiFillInstagram,
 } from 'react-icons/ai';
 import { RiFacebookCircleFill } from 'react-icons/ri';
-
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -44,9 +45,8 @@ const Menu = () => {
                     whileHover={{
                       color: '#EE4F91',
                     }}
-                    href="#"
                   >
-                    Menu
+                    <Link href='#hero'>Home</Link>
                   </motion.a>
                 </div>
                 <div className={styles.navigationItem}>
@@ -54,9 +54,8 @@ const Menu = () => {
                     whileHover={{
                       color: '#EE4F91',
                     }}
-                    href="#"
                   >
-                    Waitlist
+                    <Link href='#newsletter'>News</Link>
                   </motion.a>
                 </div>
               </div>
@@ -92,7 +91,7 @@ const Menu = () => {
                   }}
                   href="#"
                 >
-                  Booking
+                  <Link href='#booking'>Booking</Link>
                 </motion.a>
               </div>
               <div className={styles.navigationItem}>
@@ -100,9 +99,9 @@ const Menu = () => {
                   whileHover={{
                     color: '#EE4F91',
                   }}
-                  href="#"
+
                 >
-                  Visit
+                  <Link href='#visit'>Visit</Link>
                 </motion.a>
               </div>
               <motion.div className={styles.socialMediaIcons}>

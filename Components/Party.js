@@ -21,6 +21,7 @@ const Party = () => {
   });
   return (
     <motion.div
+      id='booking'
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       ref={ref}
