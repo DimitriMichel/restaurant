@@ -10,9 +10,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link href="public/fonts/style.css" rel="stylesheet"/>
-        </Head>
 
+        </Head>
         <body>
         <Main/>
         <NextScript/>
