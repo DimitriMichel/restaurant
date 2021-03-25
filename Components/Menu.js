@@ -46,7 +46,7 @@ const Menu = () => {
                       color: '#EE4F91',
                     }}
                   >
-                    <Link href='#hero'>Home</Link>
+                    <Link href="#hero">Home</Link>
                   </motion.a>
                 </div>
                 <div className={styles.navigationItem}>
@@ -55,9 +55,10 @@ const Menu = () => {
                       color: '#EE4F91',
                     }}
                   >
-                    <Link href='#newsletter'>News</Link>
+                    <Link href="#newsletter">News</Link>
                   </motion.a>
                 </div>
+
               </div>
             </motion.div>
             <motion.div
@@ -91,7 +92,7 @@ const Menu = () => {
                   }}
                   href="#"
                 >
-                  <Link href='#booking'>Booking</Link>
+                  <Link href="#booking">Book</Link>
                 </motion.a>
               </div>
               <div className={styles.navigationItem}>
@@ -99,9 +100,8 @@ const Menu = () => {
                   whileHover={{
                     color: '#EE4F91',
                   }}
-
                 >
-                  <Link href='#visit'>Visit</Link>
+                  <Link href="#visit">Visit</Link>
                 </motion.a>
               </div>
               <motion.div className={styles.socialMediaIcons}>
