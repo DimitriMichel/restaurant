@@ -60,8 +60,10 @@ const Info = () => {
             </motion.div>
             <span className={styles.highlight}>
               <i>
-                “The best ice cream in the world, as anyone who has tried it
-                will argue...”
+                <p>
+                  “The best ice cream in the world, as anyone who has tried it
+                  will argue...”
+                </p>
               </i>
             </span>
             <br />

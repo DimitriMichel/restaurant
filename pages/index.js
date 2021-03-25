@@ -28,7 +28,6 @@ const Home = () => {
       <Party/>
       <News/>
       <Banner/>
-
       <Map/>
     </div>
     </AnimatePresence>

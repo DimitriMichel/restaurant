@@ -23,15 +23,6 @@ const Booking = () => {
       transition="transition"
       className={styles.calendar}
     >
-      <Calendar
-        onClickDay={(value) => {
-          let clickedDate = value.toString().substring(0, 15);
-          if (isEnabled) {
-            setDate(clickedDate);
-          }
-          setDateSelected(true);
-        }}
-      />
       <div className={styles.dateConfirmContainer}>
         {isDateSelected ? (
           <div className={styles.dateConfirm}>
@@ -46,9 +37,9 @@ const Booking = () => {
                 variants={appearUpAnimation}
                 transition="transition"
               >
-                Confirmed{' '}
+                Confirmed
                 <span role="img" aria-label="green check mark emoji">
-                  ✅{' '}
+                  ✅
                 </span>
                 <span role="img" aria-label="party hat emoji">
                   🥳
@@ -62,6 +53,7 @@ const Booking = () => {
                   setEnabled(false);
                   setConfirmed(true);
                 }}
+                aria-expanded={isDateSelected}
               >
                 Confirm
               </motion.button>
@@ -77,6 +69,15 @@ const Booking = () => {
           </motion.div>
         )}
       </div>
+      <Calendar
+        onClickDay={(value) => {
+          let clickedDate = value.toString().substring(0, 15);
+          if (isEnabled) {
+            setDate(clickedDate);
+          }
+          setDateSelected(true);
+        }}
+      />
     </motion.div>
   );
 };

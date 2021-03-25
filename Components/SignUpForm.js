@@ -54,10 +54,11 @@ const SignUpForm = () => {
               <input
                 className={styles.submitButton}
                 type="submit"
-                value="Submit"
+                value={isSubmitted? ('Submitted'): ('Submit') }
                 onClick={() => {
                   setSubmit(true);
                 }}
+                disabled={isSubmitted}
               />
             </motion.div>
             <div className={styles.submitEmojiContainer}>

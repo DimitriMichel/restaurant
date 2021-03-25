@@ -55,9 +55,7 @@ const Party = () => {
           >
             <div className={styles.panelText}>
               <AnimateSharedLayout>
-                <motion.div layout className={styles.dash}>
-                  -
-                </motion.div>
+
                 {!isBooking ? (
                   <motion.div
                     initial={{ opacity: 0 }}

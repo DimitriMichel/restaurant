@@ -41,7 +41,7 @@
   align-items: center;
   flex-direction: column;
 }
-.panelText h1 {
+.panelText h2 {
   margin: 40px 0 0 0;
   color: white;
   font-size: 11rem;
@@ -64,7 +64,7 @@
     margin: 0;
     max-width: 100%;
   }
-  .panelText h1 {
+  .panelText h2 {
     margin: 0;
     font-size: 7rem;
     line-height: 95px;
