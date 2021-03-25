@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 html,
 
 @font-face {
@@ -19,6 +20,13 @@ h2 {
 }
 :root {
   font-size: 100%;
+}
+
+@font-face{
+  font-family:"Milton";
+  src: url('/fonts/Milton.ttf') format('truetype') ;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .react-calendar {
