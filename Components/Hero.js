@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './Hero.module.css';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
+import { FaChevronCircleDown } from 'react-icons/fa';
 import Menu from './Menu';
 
 //Animation Config
@@ -24,7 +26,17 @@ const yFloatingAnimation = {
     },
   },
 };
-
+const yBouncingAnimation = {
+  static: { y: 0 },
+  floating: {
+    y: [-10, 10],
+    transition: {
+      duration: 0.6,
+      ease: "easeIn",
+      yoyo: Infinity,
+    },
+  },
+};
 const Hero = () => {
   return (
     <section id="hero">
@@ -65,17 +77,15 @@ const Hero = () => {
                 we bring something new, something transformative - In fact
                 when's the last time you had a passionate cry?
               </motion.p>
-              <motion.button
-                role="button"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 1 }}
-                variants={appearUpAnimation}
-                initial="initial"
-                animate="animate"
+              <motion.div
+                variants={yBouncingAnimation}
+                initial="static"
+                animate="floating"
                 transition="transition"
+                className={styles.bounceArrow}
               >
-                Learn More
-              </motion.button>
+                <FaChevronCircleDown size={50} color="white" />
+              </motion.div>
             </motion.div>
             <motion.div
               variants={yFloatingAnimation}

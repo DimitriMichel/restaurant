@@ -37,7 +37,9 @@ const Menu = () => {
               transition={{ delay: 0.5 }}
               className={styles.menuSectionA}
             >
-              <span className={styles.storeName}>Scoops!</span>
+              <Link href="#hero">
+                <span className={styles.storeName}>Scoops!</span>
+              </Link>
               <div className={styles.navigationLinksA}>
                 <div className={styles.navigationItem}>
                   <motion.a
@@ -58,26 +60,28 @@ const Menu = () => {
                     <Link href="#newsletter">News</Link>
                   </motion.a>
                 </div>
-
               </div>
             </motion.div>
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              whileHover={{ rotate: 360, transition: { duration: 0.5 } }}
-              className={styles.logoContainer}
-            >
-              <div className={styles.logo}>
-                <div>
-                  <Image
-                    src="/icelogo.svg"
-                    alt="logo"
-                    width={300}
-                    height={300}
-                  />
+            <Link href="#hero">
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                whileHover={{ rotate: 360, transition: { duration: 0.5 } }}
+                className={styles.logoContainer}
+              >
+                <div className={styles.logo}>
+                  <div>
+                    <Image
+                      src="/icelogo.svg"
+                      alt="logo"
+                      width={300}
+                      height={300}
+                    />
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </Link>
+
             <motion.div
               variants={animateAppearUp}
               animate="animate"
@@ -122,6 +126,5 @@ const Menu = () => {
     </nav>
   );
 };
-
 
 export default Menu;

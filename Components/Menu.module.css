@@ -149,11 +149,24 @@
     font-size: 0.8rem;
   }
 }
+@media only screen and (max-width: 1336px) {
+  .storeName{
+    display: none;
+  }
+  .menuSectionA{
+    margin-right: 0;
+
+}
+
+}
 /* Small devices (portrait tablets and large phones, 800px and down) */
 @media only screen and (min-width: 760px) {
   .welcomeMenu {
     height: 8vw;
+
   }
+ 
+
   .logo {
     height: 7vw;
     width: 7vw;

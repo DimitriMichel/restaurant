@@ -24,7 +24,7 @@
 .panelImage {
   flex: 1;
   max-width: 50%;
-  background-image: url('../public/pinkice.jpg');
+  background-image: url('../public/pinkice.jpeg');
   background-size: cover;
   display: flex;
   justify-content: center;
